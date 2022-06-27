@@ -4,10 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Calendar;
 
-public class DeleteEventDialog extends EventDialog
-{	
-	public DeleteEventDialog(JFrame o, EventList el)
-	{
+public class DeleteEventDialog extends EventDialog {	
+	public DeleteEventDialog(JFrame o, EventList el) {
 		super(o, el);
 		init();
 		
@@ -27,10 +25,8 @@ public class DeleteEventDialog extends EventDialog
 		add(button);
 	}
 	
-	private class ButtonListener implements ActionListener
-	{
-		public void actionPerformed(ActionEvent ae)
-		{
+	private class ButtonListener implements ActionListener {
+		public void actionPerformed(ActionEvent ae) {
 			int y = (int)yearBox.getSelectedItem();
 			int m = (int)monthBox.getSelectedItem();
 			int d = (int)dayBox.getSelectedItem();
