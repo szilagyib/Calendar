@@ -3,8 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Calendar;
 
-public abstract class EventDialog extends JDialog
-{
+public abstract class EventDialog extends JDialog {
 	protected JFrame owner;
 	protected EventList evs;
 	protected JComboBox yearBox;
@@ -12,8 +11,7 @@ public abstract class EventDialog extends JDialog
 	protected JComboBox dayBox;
 	protected JButton button;
 	
-	public EventDialog(JFrame o, EventList el)
-	{
+	public EventDialog(JFrame o, EventList el) {
 		super(o);
 		owner = o;
 		evs = el;
@@ -23,27 +21,23 @@ public abstract class EventDialog extends JDialog
 		setVisible(false);
 	}
 	
-	protected void init()
-	{		
+	protected void init() {		
 		Object[] years = new Object[10];
-	    int actualYear = Calendar.getInstance().get(Calendar.YEAR);
-		for (int i=0; i<10; i++)
-		{
+	    	int actualYear = Calendar.getInstance().get(Calendar.YEAR);
+		for (int i=0; i<10; i++) {
 			years[i] = actualYear;
 			actualYear++;
 		}
 		
 		Object[] months = new Object[12];
 		int m = 0;
-		while (m < 12)
-		{
+		while (m < 12) {
 			months[m] = ++m;
 		}
 
 		Object[] days = new Object[31];
 		int d = 0;
-		while (d < 31)
-		{
+		while (d < 31) {
 			days[d] = ++d;
 		}
 		
