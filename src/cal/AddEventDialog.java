@@ -3,12 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class AddEventDialog extends EventDialog
-{
+public class AddEventDialog extends EventDialog {
 	private JTextField eventField;
 	
-	public AddEventDialog(JFrame o, EventList el)
-	{
+	public AddEventDialog(JFrame o, EventList el) {
 		super(o, el);
 		init();
 		eventField = new JTextField(10);
@@ -32,10 +30,8 @@ public class AddEventDialog extends EventDialog
 		add(button);
 	}
 	
-	private class ButtonListener implements ActionListener
-	{
-		public void actionPerformed(ActionEvent ae)
-		{
+	private class ButtonListener implements ActionListener {
+		public void actionPerformed(ActionEvent ae) {
 			int y = (int)yearBox.getSelectedItem();
 			int m = (int)monthBox.getSelectedItem();
 			int d = (int)dayBox.getSelectedItem();
