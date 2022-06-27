@@ -10,36 +10,29 @@ public class FileManager
 {
 	private String file_name;
 	
-	public FileManager(String f)
-	{
+	public FileManager(String f) {
 		file_name = f;
 	}
 	
-	public void serialize(EventList evs)
-	{
-        try
-        {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file_name));
-            oos.writeObject(evs.events);
-            oos.close();
-        } catch(Exception exc)
-        {
-           exc.printStackTrace();
-        }
+	public void serialize(EventList evs) {
+		try {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file_name));
+		    	oos.writeObject(evs.events);
+		    	oos.close();
+		} catch(Exception exc) {
+			exc.printStackTrace();
+		}
 	}
 	
-	public EventList deserialize()
-	{
+	public EventList deserialize() {
 		EventList evs = new EventList();
-		try
-	    {
-	        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file_name));
-	        evs.events = (List<Event>)ois.readObject();
-	        ois.close();
-	    } catch(Exception exc)
-	    {
-	        exc.printStackTrace();
-	    }
+		try {
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file_name));
+			evs.events = (List<Event>)ois.readObject();
+			ois.close();
+	    	} catch(Exception exc) {
+	        	exc.printStackTrace();
+		}
 		return evs;
 	}
 }
