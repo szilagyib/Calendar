@@ -1,2 +1,2 @@
 # Calendar
-A simple calendar app written in Java. You can add and delete events.
+A simple calendar app written in Java using Swing. You can add and delete events.
